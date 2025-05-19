@@ -13,7 +13,7 @@ if (isset($_GET['a']) && isset($_GET['b']) && isset($_GET['c'])) {
     $c_escaped = escapeshellarg($c);
 
     // Llamar al script Python
-    $command = "python3 calculo.py $a_escaped $b_escaped $c_escaped";
+    $command = "python3 calculate.py $a_escaped $b_escaped $c_escaped";
     $output = shell_exec($command);
 }
 ?>
@@ -29,16 +29,16 @@ if (isset($_GET['a']) && isset($_GET['b']) && isset($_GET['c'])) {
     <h1>Calculate: b + <span>&#8730;</span><span  style="border-top: 1px solid black">c<sup>3</sup></span>  / a × 10</h1>
 
     <form method="get">
-        <label for="a">Valor de a:</label>
+        <label for="a">Value of a:</label>
         <input type="number" name="a" id="a" step="any" required><br><br>
 
-        <label for="b">Valor de b:</label>
+        <label for="b">Value of b:</label>
         <input type="number" name="b" id="b" step="any" required><br><br>
 
-        <label for="c">Valor de c:</label>
+        <label for="c">Value of c:</label>
         <input type="number" name="c" id="c" step="any" required><br><br>
 
-        <input type="submit" value="Calcular">
+        <input type="submit" value="Calculate">
     </form>
 
     <hr>
